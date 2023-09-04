@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList } from "react-native";
 import { useTheme } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import createStyles from "./HomeScreen.style";
