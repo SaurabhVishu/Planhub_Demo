@@ -14,6 +14,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "redux/store/Store";
 import SignInViewModel from "viewModels/SignInViewModel";
 import { isReadyRef, navigationRef } from "@navigation";
+import ViewScheduleViewModel from "viewModels/ViewScheduleViewModel";
+
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -77,6 +79,10 @@ const Navigation = () => {
       theme={isDarkMode ? DarkTheme : LightTheme}
     >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen
+          name={SCREENS.ViewSchedule}
+          component={ViewScheduleViewModel}
+        />
         <Stack.Screen name={SCREENS.LOGIN} component={SignInViewModel} />
         <Stack.Screen name={SCREENS.TAB} component={RenderTabNavigation} />
         <Stack.Screen name={SCREENS.DETAIL}>
